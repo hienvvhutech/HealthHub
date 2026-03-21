@@ -1,0 +1,104 @@
+/* ===========================
+   MAIN CONTENT (phần bên phải sidebar)
+=========================== */
+#main {
+  margin-left: 260px;
+  padding: 30px;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+/* ===========================
+   PAGE HEADER
+=========================== */
+.page-header-new h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+.page-header-new p {
+  margin-top: -6px;
+  font-size: 16px;
+  color: #666;
+}
+
+/* ===========================
+   TABLE WRAPPER BOX
+=========================== */
+.users-box {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================
+   TABLE
+=========================== */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Header */
+.users-table th {
+  padding: 14px;
+  background: #f5f5f8;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #444;
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+}
+
+/* Table Rows */
+.users-table td {
+  padding: 14px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd; /* Viền rõ hơn */
+}
+
+/* Center role column */
+.users-table td:nth-child(3) {
+  text-align: center;
+}
+
+/* Hover effect */
+.users-table tbody tr {
+  background: #ffffff;
+}
+
+.users-table tbody tr:hover {
+  background: #f3f3f7;
+}
+
+/* ===========================
+   ROLE BADGES
+=========================== */
+.role-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+/* Role colors */
+.role-badge.admin {
+  background: #e74c3c;
+}
+
+.role-badge.doctor {
+  background: #8e44ad;
+}
+
+.role-badge.patient {
+  background: #27ae60;
+}

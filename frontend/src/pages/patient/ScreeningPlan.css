@@ -1,0 +1,183 @@
+.screening-page {
+  --background: #f0f2f5;
+}
+
+.screening-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* FORM STYLES */
+.form-section {
+  background: white;
+  padding: 30px 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-header h3 {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.form-header p {
+  margin: 0 0 24px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.custom-item {
+  --background: #f9fafb;
+  --border-radius: 12px;
+  --padding-start: 16px;
+  --inner-padding-end: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.label-float {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.analyze-btn {
+  margin-top: 24px;
+  --background: #4f46e5;
+  --border-radius: 12px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  --box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* RESULT STYLES */
+.ai-header {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.brain-icon {
+  font-size: 28px;
+}
+
+.ai-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.recommendation-card {
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  margin: 0;
+  background: white;
+  overflow: visible; /* Để shadow đẹp hơn */
+}
+
+.result-group {
+  margin-bottom: 20px;
+}
+
+.result-group .label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.result-group .value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.primary-text {
+  color: #4f46e5;
+  font-size: 18px;
+}
+
+/* Doctor Info Box */
+.doctor-info-box {
+  background: #f3f4f6;
+  padding: 16px;
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b; /* Màu cam làm điểm nhấn */
+}
+
+.doc-name {
+  font-weight: 700;
+  color: #111827;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.doc-detail {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.doc-hospital {
+  font-size: 12px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.book-btn {
+  margin-top: 16px;
+  --background: #3b82f6; /* Blue like screenshot */
+  --border-radius: 8px;
+  font-weight: 700;
+  height: 48px;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 20px 0;
+}
+
+.reason-text {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.5;
+  background: #fefce8;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #fef9c3;
+}
+
+.test-list {
+  padding-left: 20px;
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.reminder-text {
+  font-size: 14px;
+  color: #374151;
+}
+
+.close-btn {
+  margin-top: 20px;
+  --background: #60a5fa; /* Lighter blue */
+  --border-radius: 12px;
+  font-weight: 600;
+  --color: white;
+}

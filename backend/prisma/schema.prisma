@@ -1,0 +1,329 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              Int                 @id @default(autoincrement())
+  email           String              @unique
+  password        String
+  role            String
+  doctor          Doctor?
+  healthData      HealthData[]
+  notifications   Notification[]
+  patient         Patient?
+  recommendations RecommendationLog[]
+  devices         Device[]            // Liên kết với thiết bị IoT
+}
+
+model Doctor {
+  id             Int             @id @default(autoincrement())
+  fullName       String
+  email          String          @unique
+  dob            DateTime?
+  department     String?
+  userId         Int             @unique
+  hospital       String?
+  phone          String?
+  experience     Int?
+  languages      String?
+  bio            String?
+  specialtyId    Int?
+  appointments   Appointment[]
+  chatSessions   ChatSession[]
+  specialty      Specialty?      @relation(fields: [specialtyId], references: [id])
+  user           User            @relation(fields: [userId], references: [id], onUpdate: NoAction)
+  feedbacks      Feedback[]
+  medicalRecords MedicalRecord[]
+}
+
+model Patient {
+  id             Int             @id @default(autoincrement())
+  code           String?
+  fullName       String
+  email          String
+  phone          String?
+  address        String?
+  dob            DateTime?
+  userId         Int             @unique
+  avatarUrl      String?
+  bloodType      String?
+  gender         String?
+  height         Int?
+  weight         Int?
+  appointments   Appointment[]
+  chatSessions   ChatSession[]
+  healthData     HealthData[]
+  medicalRecords MedicalRecord[]
+  user           User            @relation(fields: [userId], references: [id], onUpdate: NoAction)
+  reexams        Reexam[]
+}
+
+model Appointment {
+  id                 Int                @id @default(autoincrement())
+  date               DateTime
+  status             String             @default("Waiting")
+  doctorId           Int
+  patientId          Int
+  createdAt          DateTime           @default(now())
+  note               String?
+  fee                Int                @default(200000)
+  reExamDate         DateTime?
+  specialty          String?
+  time               String?
+  isVisibleForDoctor Boolean            @default(true)
+  sequenceNumber     Int
+  doctor             Doctor             @relation(fields: [doctorId], references: [id])
+  patient            Patient            @relation(fields: [patientId], references: [id])
+  canLamSangs        CanLamSang[]
+  feedbacks          Feedback[]
+  medicalRecord      MedicalRecord?
+  payment            Payment?
+  prescription       Prescription?
+  prescriptionItems  PrescriptionItem[]
+  reexams            Reexam[]
+}
+
+model MedicalRecord {
+  id              Int           @id @default(autoincrement())
+  patientId       Int
+  type            String
+  description     String
+  date            DateTime
+  appointmentId   Int           @unique
+  doctorId        Int
+  note            String?
+  reExamDate      DateTime?
+  confirmedReExam Boolean       @default(false)
+  prescriptionId  Int?          @unique
+  diseaseId       Int?
+  appointment     Appointment   @relation(fields: [appointmentId], references: [id], onUpdate: NoAction, map: "FK_MedicalRecord_Appointment")
+  disease         Disease?      @relation(fields: [diseaseId], references: [id])
+  doctor          Doctor        @relation(fields: [doctorId], references: [id], onUpdate: NoAction)
+  patient         Patient       @relation(fields: [patientId], references: [id], onUpdate: NoAction)
+  prescription    Prescription? @relation("MedicalRecordPrescription", fields: [prescriptionId], references: [id])
+}
+
+model CanLamSang {
+  id            Int         @id @default(autoincrement())
+  appointmentId Int
+  type          String
+  result        String
+  note          String?
+  date          DateTime    @default(now())
+  cost          Int         @default(0)
+  appointment   Appointment @relation(fields: [appointmentId], references: [id])
+}
+
+model Feedback {
+  id            Int         @id @default(autoincrement())
+  fullName      String
+  email         String
+  message       String
+  createdAt     DateTime    @default(now())
+  doctorId      Int
+  appointmentId Int
+  appointment   Appointment @relation(fields: [appointmentId], references: [id], onUpdate: NoAction)
+  doctor        Doctor      @relation(fields: [doctorId], references: [id], onUpdate: NoAction)
+}
+
+model Prescription {
+  id            Int            @id @default(autoincrement())
+  createdAt     DateTime       @default(now())
+  appointmentId Int            @unique
+  instructions  String
+  totalPrice    Int            @default(0)
+  medicalRecord MedicalRecord? @relation("MedicalRecordPrescription")
+  medications   Medication[]
+  appointment   Appointment    @relation(fields: [appointmentId], references: [id])
+}
+
+model Medication {
+  id                        Int          @id @default(autoincrement())
+  prescriptionId            Int
+  name                      String
+  dosage                    String
+  frequency                 String
+  duration                  String
+  note                      String?
+  prescriptionAppointmentId Int          @default(0)
+  price                     Int          @default(0)
+  description               String?
+  prescription              Prescription @relation(fields: [prescriptionId], references: [id])
+}
+
+model Specialty {
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  doctors Doctor[]
+}
+
+model ResetToken {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  email     String
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+}
+
+model ChatSession {
+  id        Int           @id @default(autoincrement())
+  doctorId  Int
+  patientId Int
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  messages  ChatMessage[]
+  doctor    Doctor        @relation(fields: [doctorId], references: [id])
+  patient   Patient       @relation(fields: [patientId], references: [id])
+}
+
+model ChatMessage {
+  id            Int         @id @default(autoincrement())
+  content       String
+  chatSessionId Int
+  senderId      Int
+  receiverId    Int
+  sentAt        DateTime    @default(now())
+  chatSession   ChatSession @relation(fields: [chatSessionId], references: [id])
+}
+
+model Medicine {
+  id                Int                @id @default(autoincrement())
+  name              String
+  dosage            String?
+  unit              String?
+  note              String?
+  description       String?
+  price             Float?
+  prescriptionItems PrescriptionItem[]
+}
+
+model Disease {
+  id             Int             @id @default(autoincrement())
+  name           String
+  icd_code       String?
+  description    String?
+  medicalRecords MedicalRecord[]
+}
+
+model PrescriptionItem {
+  id            Int         @id @default(autoincrement())
+  appointmentId Int
+  medicineId    Int
+  quantity      Int
+  usage         String?
+  appointment   Appointment @relation(fields: [appointmentId], references: [id])
+  medicine      Medicine    @relation(fields: [medicineId], references: [id])
+}
+
+model Notification {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  title       String
+  message     String
+  type        String
+  status      String   @default("Unread")
+  createdAt   DateTime @default(now())
+  scheduledAt DateTime? // New field for scheduling notifications
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model Payment {
+  id              Int         @id @default(autoincrement())
+  appointmentId   Int         @unique
+  amount          Int
+  method          String
+  status          String
+  transactionDate DateTime    @default(now())
+  appointment     Appointment @relation(fields: [appointmentId], references: [id])
+}
+
+model HealthData {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  metric      String
+  value       String
+  collectedAt DateTime @default(now())
+  source      String?
+  patientId   Int?
+  patient     Patient? @relation(fields: [patientId], references: [id])
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model RecommendationLog {
+  id             Int       @id @default(autoincrement())
+  userId         Int
+  title          String
+  description    String
+  suggestedAt    DateTime  @default(now())
+  riskScore      Int?
+  suggestedDate  DateTime? @db.DateTime
+  suggestedTests String?   @db.NVarChar(Max)
+  status         String?   @default("pending", map: "DF__Recommend__statu__7AF13DF7") @db.NVarChar(50)
+  createdAt      DateTime? @default(now(), map: "DF__Recommend__creat__7BE56230") @db.DateTime
+  user           User      @relation(fields: [userId], references: [id])
+}
+
+model Reexam {
+  id            Int         @id @default(autoincrement())
+  patientId     Int
+  appointmentId Int
+  onTime        Boolean     @default(false)
+  reexamDate    DateTime
+  notes         String?
+  createdAt     DateTime    @default(now())
+  appointment   Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+  patient       Patient     @relation(fields: [patientId], references: [id], onUpdate: NoAction)
+}
+
+model CLSType {
+  id   Int    @id(map: "PK__CLSType__3213E83FDFAFF2F2") @default(autoincrement())
+  name String @db.NVarChar(255)
+}
+
+model PublicChatMessage {
+  id        Int       @id(map: "PK__PublicCh__3213E83F09689875") @default(autoincrement())
+  guestId   String    @db.NVarChar(100)
+  message   String    @db.NVarChar(Max)
+  createdAt DateTime? @default(now(), map: "DF__PublicCha__creat__0E04126B") @db.DateTime
+  sender    String    @default("user", map: "DF__PublicCha__sende__0EF836A4") @db.NVarChar(50)
+}
+
+// --- NEW MODELS FOR AI & IoT ---
+
+model ScreeningPlan {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  minAge      Int
+  maxAge      Int
+  gender      String   // "Male", "Female", "Both"
+  riskFactor  String?  // Ví dụ: "HighBP", "Diabetes"
+  tests       String   // Danh sách xét nghiệm gợi ý (JSON string)
+  createdAt   DateTime @default(now())
+}
+
+model Device {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  name        String   // Tên thiết bị (VD: Omron BP Monitor)
+  type        String   // "BloodPressure", "Glucose", "SpO2"
+  macAddress  String?  // Địa chỉ MAC nếu kết nối Bluetooth
+  status      String   @default("Active")
+  lastSync    DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+model sysdiagrams {
+  name         String @db.NVarChar(128)
+  principal_id Int
+  diagram_id   Int    @id(map: "PK__sysdiagr__C2B05B61FD7621B2") @default(autoincrement())
+  version      Int?
+  definition   Bytes?
+
+  @@unique([principal_id, name], map: "UK_principal_name")
+}

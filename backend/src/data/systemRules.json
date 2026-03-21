@@ -1,0 +1,21 @@
+{
+  "Tiêu hóa": [
+    "Siêu âm bụng",
+    "Xét nghiệm máu tổng quát",
+    "Xét nghiệm chức năng gan"
+  ],
+
+  "Thần kinh": ["Điện não đồ (EEG)", "Chụp CT Scan não", "MRI não"],
+
+  "Tim mạch": ["Điện tâm đồ (ECG)", "Siêu âm tim", "Xét nghiệm mỡ máu"],
+
+  "Hô hấp": ["X-quang phổi", "Đo chức năng hô hấp", "Xét nghiệm đờm"],
+
+  "Cơ xương khớp": ["X-quang khớp", "Siêu âm khớp", "Xét nghiệm viêm CRP"],
+
+  "Nội khoa": [
+    "Xét nghiệm máu tổng quát",
+    "Xét nghiệm đường huyết",
+    "Xét nghiệm nước tiểu"
+  ]
+}

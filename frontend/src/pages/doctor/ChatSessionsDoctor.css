@@ -1,0 +1,126 @@
+ion-page {
+  --background: #f9fafb;
+  font-family: Arial, sans-serif;
+}
+
+ion-header ion-toolbar {
+  --background: #1e40af;
+  --color: white;
+  padding: 10px;
+}
+
+ion-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+ion-content {
+  padding: 15px;
+}
+
+ion-list {
+  background: transparent;
+}
+
+ion-item {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+ion-avatar div {
+  background-color: #1e40af;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+ion-label h2 {
+  font-size: 1rem;
+  color: #1e40af;
+}
+
+ion-label pre {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+ion-text small {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Chat preview styling within ion-item */
+ion-item div {
+  background-color: #e5e7eb; /* Default for patient messages */
+  color: #000000; /* Black text */
+  padding: 5px 10px;
+  border-radius: 5px;
+  max-width: 60%;
+  margin-left: 0;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+ion-item[style*="justifyContent: flex-end"] div {
+  background-color: #93c5fd; /* Doctor messages */
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+  /* Push to the right edge */
+  right: 0;
+  position: absolute;
+  transform: translateX(100%); /* Adjust to align with the right edge */
+}
+
+ion-item div p {
+  margin: 0;
+}
+
+ion-item div small {
+  display: block;
+  font-size: 0.8rem;
+  color: #000000; /* Black text for timestamp */
+  margin-top: 5px;
+}
+
+ion-list p {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  ion-title {
+    font-size: 1rem;
+  }
+  ion-item {
+    padding: 8px;
+  }
+  ion-label h2 {
+    font-size: 0.9rem;
+  }
+  ion-text small {
+    font-size: 0.7rem;
+  }
+  ion-item div {
+    max-width: 70%;
+    font-size: 0.8rem;
+  }
+  ion-item[style*="justifyContent: flex-end"] div {
+    transform: translateX(80%); /* Adjusted for smaller screens */
+  }
+}

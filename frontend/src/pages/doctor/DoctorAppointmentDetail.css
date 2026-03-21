@@ -1,0 +1,172 @@
+/* DoctorAppointmentDetail.css */
+
+.doctor-detail-page {
+  --background: #f3f4f6;
+}
+
+.detail-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: white;
+  margin-bottom: 24px;
+  border: 1px solid #d1d5db;
+}
+
+.detail-card ion-card-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 20px;
+  background: #ffffff;
+}
+
+.detail-card ion-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000 !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-card ion-card-content {
+  padding: 20px;
+  color: #000000 !important;
+}
+
+/* Labels */
+ion-label {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Inputs & Textareas */
+ion-input, ion-textarea, ion-select {
+  --background: #ffffff;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  color: #000000 !important; /* Text input color */
+  font-size: 15px;
+  margin-top: 4px;
+  font-weight: 500;
+  --placeholder-color: #6b7280;
+}
+
+/* Focus state */
+ion-input.has-focus, ion-textarea.has-focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+ion-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --min-height: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Buttons */
+ion-button {
+  --border-radius: 8px;
+  font-weight: 700;
+  margin-top: 12px;
+  text-transform: none;
+  font-size: 15px;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --color: #ffffff;
+}
+
+/* Text visibility fixes */
+p {
+  color: #000000;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+strong {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Medicine Item Box */
+.medicine-box {
+  background: #f8fafc;
+  border: 1px solid #9ca3af;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.medicine-box:hover {
+  border-color: #000000;
+}
+
+/* Accordion in History */
+ion-accordion {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* FIX: Header Accordion chữ ĐEN */
+ion-accordion ion-item[slot="header"] {
+  --background: #60a5fa;
+  --color: #000000 !important;
+  font-weight: 800;
+}
+
+ion-accordion ion-item[slot="header"] ion-icon {
+  color: #000000 !important;
+}
+
+ion-accordion.accordion-expanded ion-item[slot="header"] {
+  --background: #3b82f6;
+  --color: #000000 !important;
+}
+
+.ion-padding[slot="content"] {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* =========================================
+   GLOBAL OVERRIDES FOR ION-SELECT ALERTS
+   (Phải đặt ngoài scope class page)
+========================================= */
+.alert-radio-label, 
+.alert-checkbox-label,
+.action-sheet-button {
+  color: #000000 !important; /* Chữ trong popup chọn phải là màu đen */
+  font-weight: 500;
+}
+
+.alert-title {
+  color: #000000 !important;
+  font-weight: 700;
+}
+
+.alert-message {
+  color: #374151 !important;
+}
+
+/* Popover Content (nếu dùng interface="popover") */
+ion-popover ion-content {
+  --color: #000000 !important;
+  --background: #ffffff !important;
+}
+
+ion-popover ion-item {
+  --color: #000000 !important;
+  --background: #ffffff !important;
+}

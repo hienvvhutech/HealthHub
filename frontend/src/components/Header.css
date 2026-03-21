@@ -1,0 +1,346 @@
+.header {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ✅ Style cho nút Back trên Mobile */
+.mobile-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #1f2937;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 4px; 
+}
+
+.mobile-back-btn:active {
+  background: #f3f4f6;
+}
+
+.app-logo {
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+}
+
+.app-name-part1 {
+  color: #10b981;
+}
+
+.app-name-part2 {
+  color: #3b82f6;
+}
+
+.current-time {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  border-left: 1px solid #e5e7eb;
+  padding-left: 12px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-nav div {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.header-nav div:hover {
+  color: #4f46e5;
+}
+
+.header-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header-icon {
+  font-size: 28px;
+  color: #4b5563;
+  transition: color 0.2s;
+}
+
+.header-icon:hover {
+  color: #4f46e5;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: #4338ca;
+}
+
+/* --- NOTIFICATION BADGE --- */
+.notification-bell {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: #ef4444; 
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+.drawer-item .drawer-badge {
+  background-color: #ef4444;
+  color: white;
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+
+/* --- MOBILE SPECIFIC --- */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+.mobile-menu-btn {
+  font-size: 28px;
+  color: #1f2937;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Mobile Drawer Overlay */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Drawer */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -280px; /* Hidden by default */
+  width: 280px;
+  height: 100vh;
+  background: white;
+  z-index: 1002;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.drawer-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.drawer-header ion-icon {
+  font-size: 24px;
+  color: #6b7280;
+}
+
+.drawer-items {
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.drawer-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: #e0e7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+  font-size: 24px;
+}
+
+.user-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-greeting {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.user-action {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.drawer-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.drawer-item:active {
+  background: #f3f4f6;
+}
+
+.drawer-item ion-icon {
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.drawer-footer {
+  padding: 20px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.drawer-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.drawer-btn.logout {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.drawer-btn.login {
+  background: #4f46e5;
+  color: white;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex; 
+    align-items: center;
+  }
+  
+  .mobile-back-btn {
+      display: flex; 
+  }
+
+  .current-time {
+    display: none;
+  }
+
+  .header {
+    height: 56px;
+    padding: 0 16px;
+  }
+  
+  .app-logo {
+      font-size: 20px; /* Nhỏ hơn trên mobile */
+  }
+  
+  /* Giảm khoảng cách trong drawer trên mobile nhỏ */
+  .drawer-item {
+      padding: 12px 16px;
+  }
+}

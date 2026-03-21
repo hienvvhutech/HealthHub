@@ -1,0 +1,329 @@
+.profile-page {
+  background: #f8fafc;
+}
+.profile-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #263159;
+  margin-bottom: 32px;
+}
+.profile-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.profile-card-left {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(38, 49, 89, 0.08);
+  padding: 0 0 18px 0;
+  margin-bottom: 18px;
+}
+.profile-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 12px 12px 12px;
+}
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  border: 3px solid #e3eafc;
+  object-fit: cover;
+  background: #f5faff;
+}
+.profile-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 2px;
+}
+.profile-role {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+.profile-info-quick {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 18px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 8px;
+}
+
+/* Cải thiện hiển thị thông tin cá nhân */
+.profile-info-quick div {
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #1976d2;
+}
+
+.profile-info-quick b {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.profile-health-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin: 10px 0 6px 0;
+  padding: 0 8px;
+}
+.profile-health-stats {
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  text-align: left;
+  padding: 0 8px;
+}
+
+/* Cải thiện hiển thị chỉ số sức khỏe */
+.profile-health-stats div {
+  background: #f0f9ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #0ea5e9;
+}
+
+.profile-health-stats b {
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.profile-card-form {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(38, 49, 89, 0.08);
+  padding: 0 0 18px 0;
+}
+.profile-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  margin-bottom: 18px;
+}
+.profile-update-btn {
+  --background: #1976d2;
+  --color: #fff;
+  --border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 18px;
+  letter-spacing: 1px;
+}
+
+/* Cải thiện form items */
+.profile-form-grid ion-item {
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-padding-end: 8px;
+  --inner-padding-start: 8px;
+  --min-height: 50px;
+  font-size: 15px;
+  --background: #fff;
+  --color: #333;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+/* Cải thiện label color */
+.profile-form-grid ion-item ion-label {
+  --color: #1976d2 !important;
+  font-weight: 600;
+}
+
+/* Cải thiện input text color */
+.profile-form-grid ion-item ion-input {
+  --color: #333 !important;
+  --placeholder-color: #999 !important;
+}
+
+/* Cải thiện select color */
+.profile-form-grid ion-item ion-select {
+  --color: #333 !important;
+  --placeholder-color: #999 !important;
+}
+
+/* Card header cải thiện */
+.profile-card-form ion-card-header ion-card-title {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .profile-form-grid {
+    grid-template-columns: 1fr;
+    gap: 14px 0;
+  }
+}
+@media (max-width: 600px) {
+  .profile-title {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .profile-card-left,
+  .profile-card-form {
+    border-radius: 10px;
+    padding: 0 0 8px 0;
+  }
+}
+
+/* ===========================================
+   CALENDAR STYLING - Cải thiện giao diện lịch
+   =========================================== */
+
+/* Ionic DateTime - Force white background */
+ion-datetime {
+  --background: white !important;
+  --color: #333 !important;
+  background: white !important;
+  color: #333 !important;
+}
+
+/* Modal datetime */
+.ion-modal ion-datetime {
+  --background: white !important;
+  --color: #333 !important;
+  background: white !important;
+  color: #333 !important;
+}
+
+/* Calendar container */
+ion-datetime .calendar-root {
+  background: white !important;
+  color: #333 !important;
+}
+
+/* All calendar parts with highest specificity */
+ion-datetime::part(calendar),
+ion-datetime::part(calendar-header),
+ion-datetime::part(calendar-body),
+ion-datetime::part(calendar-month-grid),
+ion-datetime::part(calendar-day),
+ion-datetime::part(grid),
+ion-datetime .calendar-month-grid,
+ion-datetime .calendar-body,
+ion-datetime .calendar-day {
+  background-color: white !important;
+  background: white !important;
+  color: #333 !important;
+}
+
+/* Calendar day styling */
+ion-datetime::part(calendar-day) {
+  background-color: white !important;
+  color: #333 !important;
+  border-radius: 50% !important;
+}
+
+/* Hover effect */
+ion-datetime::part(calendar-day):hover {
+  background-color: #e3f2fd !important;
+  color: #1976d2 !important;
+}
+
+/* Selected day */
+ion-datetime::part(calendar-day-selected) {
+  background-color: #1976d2 !important;
+  color: white !important;
+}
+
+/* Today */
+ion-datetime::part(calendar-day-today) {
+  background-color: #f0f9ff !important;
+  color: #1976d2 !important;
+  font-weight: 600 !important;
+  border: 2px solid #1976d2 !important;
+}
+
+/* Weekday headers */
+ion-datetime::part(calendar-weekday) {
+  background-color: #f8fafc !important;
+  color: #666 !important;
+  font-weight: 600 !important;
+}
+
+/* Month/Year header - keep blue */
+ion-datetime::part(calendar-month-year),
+ion-datetime::part(calendar-month-year-toggle) {
+  background-color: #1976d2 !important;
+  color: white !important;
+}
+
+/* Navigation arrows */
+ion-datetime::part(calendar-next-prev) {
+  color: white !important;
+}
+
+/* Override any dark theme */
+ion-datetime,
+ion-datetime * {
+  --ion-color-step-50: white !important;
+  --ion-color-step-100: white !important;
+  --ion-color-step-150: white !important;
+  --ion-color-step-200: white !important;
+  --ion-color-step-250: white !important;
+  --ion-color-step-300: white !important;
+  --ion-background-color: white !important;
+  --ion-text-color: #333 !important;
+}
+
+/* Modal styling */
+.ion-modal {
+  --backdrop-opacity: 0.4;
+}
+
+.ion-modal .modal-wrapper {
+  background: white !important;
+}
+
+/* Datetime in modal */
+.ion-modal ion-datetime {
+  background: white !important;
+  color: #333 !important;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional overrides for stubborn elements */
+ion-datetime .datetime-calendar,
+ion-datetime .calendar-month,
+ion-datetime .calendar-year {
+  background: white !important;
+  color: #333 !important;
+}
+
+/* Force white background on all calendar elements */
+ion-datetime [part*="calendar"],
+ion-datetime [class*="calendar"] {
+  background: white !important;
+  background-color: white !important;
+  color: #333 !important;
+}
+.center-btn {
+  display: block;
+  margin: 20px auto 0 auto; /* Căn giữa + cách phía trên */
+  padding: 0 24px;
+  height: 44px;
+  max-width: 300px; /* 👈 CHÍNH YẾU: Giới hạn chiều ngang */
+  width: 100%; /* Đảm bảo nút vẫn scale nhỏ theo max-width */
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,199 @@
+.history-page {
+  --background: #f4f6f8;
+}
+
+.empty-history {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+}
+
+.empty-history ion-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #9ca3af;
+}
+
+.history-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.history-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  background: white;
+  overflow: hidden;
+  border: 1px solid #d1d5db; /* Viền xám rõ */
+}
+
+.history-card ion-card-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 20px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.history-card ion-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+}
+
+.history-card ion-card-subtitle {
+  font-size: 14px;
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.history-card ion-card-content {
+  padding: 0;
+}
+
+/* Diagnosis Section */
+.section {
+  padding: 20px;
+  background: white;
+}
+
+.section h4 {
+  font-size: 13px;
+  font-weight: 800;
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.note-text {
+  font-size: 15px;
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- ACCORDION STYLES (HEADER) --- */
+ion-accordion-group {
+  border-top: 1px solid #e5e7eb;
+  margin: 0 10px 10px 10px;
+}
+
+ion-accordion {
+  background: white;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+}
+
+/* Header Accordion: Chữ trắng nền xanh */
+.accordion-header {
+  --background: #3b82f6;
+  --color: #ffffff;      
+  --min-height: 48px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.accordion-header ion-icon {
+  color: #ffffff;
+}
+
+ion-accordion.accordion-expanded .accordion-header {
+  --background: #2563eb;
+}
+
+/* --- ACCORDION CONTENT --- */
+.accordion-content {
+  padding: 16px 20px;
+  background: #ffffff; /* Nền trắng cho nội dung dễ đọc */
+  color: #000000;      /* ✅ ĐEN TUYỆT ĐỐI */
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: none;
+}
+
+/* Medicine List */
+.med-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.med-list li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #9ca3af; /* Viền đứt nét đậm hơn */
+}
+
+.med-list li:last-child {
+  border-bottom: none;
+}
+
+.med-list b {
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  font-size: 15px;
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 800;
+}
+
+.med-note {
+  font-size: 13px;
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  font-style: italic;
+  display: block;
+  margin-top: 4px;
+}
+
+/* CLS List */
+.cls-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cls-item:last-child {
+  border-bottom: none;
+}
+
+.cls-item strong {
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  font-weight: 700;
+}
+
+/* Re-exam Alert */
+.reexam-alert {
+  margin: 16px 20px 20px 20px;
+  padding: 12px 16px;
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+  border-radius: 8px;
+  color: #000000;      /* ✅ ĐEN TUYỆT ĐỐI */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.reexam-alert ion-icon {
+  font-size: 18px;
+  color: #047857; /* Icon giữ màu xanh cho đẹp */
+}

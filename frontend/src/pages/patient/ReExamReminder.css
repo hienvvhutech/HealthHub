@@ -1,0 +1,281 @@
+.reminder-page {
+  padding: 1rem;
+  background: #f8fafc;
+}
+
+.reminder-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+  text-align: center;
+}
+
+ion-card.reminder-card {
+  --background: #f0f9ff; /* ✅ dùng đúng biến theme */
+  border: 1px solid #bae6fd;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Cải thiện thông tin lịch hẹn */
+.reminder-card ion-card-header {
+  padding: 12px 16px;
+  background: #f0f9ff;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.reminder-card ion-card-title {
+  color: #1976d2 !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px;
+}
+
+.reminder-card ion-card-subtitle {
+  color: #0369a1 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+/* Thông tin chi tiết lịch hẹn */
+.reminder-card ion-item {
+  --background: #fff;
+  --color: #333;
+  --border-color: #e5e7eb;
+  margin-bottom: 4px;
+  border-radius: 6px;
+}
+
+.reminder-card ion-item ion-label {
+  --color: #374151 !important;
+  font-weight: 500;
+}
+
+/* Icon styling */
+.reminder-card ion-icon {
+  color: #1976d2;
+  margin-right: 8px;
+}
+
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  margin-top: 2rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.no-appointments {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.sub {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.reminder-settings {
+  margin-top: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.reminder-label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1976d2;
+  font-size: 1.1rem;
+}
+
+.reminder-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 3px solid #1976d2;
+}
+
+.reminder-toggle ion-label {
+  color: #374151 !important;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.reminder-toggle ion-icon {
+  color: #1976d2;
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.reminder-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.reminder-actions ion-button {
+  --border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Button styling */
+.reminder-actions ion-button[fill="clear"] {
+  --color: #6b7280;
+  --background: #f3f4f6;
+  --color-hover: #374151;
+  --background-hover: #e5e7eb;
+}
+
+.reminder-actions ion-button[color="primary"] {
+  --background: #1976d2;
+  --color: #fff;
+  --background-hover: #1565c0;
+}
+
+.calendar-card {
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-card ion-card-header {
+  background: #1976d2;
+  color: #fff;
+  border-radius: 12px 12px 0 0;
+}
+
+.calendar-card ion-card-title {
+  color: #fff !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+}
+
+/* Calendar trong card */
+.calendar-card ion-datetime {
+  --background: #fff;
+  --color: #333;
+  padding: 16px;
+}
+
+/* Calendar styling cho phần này */
+.calendar-card ion-datetime::part(calendar) {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.calendar-card ion-datetime::part(calendar-day) {
+  background-color: #fff !important;
+  color: #333 !important;
+  border-radius: 6px;
+}
+
+.calendar-card ion-datetime::part(calendar-day):hover {
+  background-color: #e3f2fd !important;
+  color: #1976d2 !important;
+}
+
+.calendar-card ion-datetime::part(calendar-day-selected) {
+  background-color: #1976d2 !important;
+  color: #fff !important;
+}
+
+.calendar-card ion-datetime::part(calendar-day-today) {
+  background-color: #f0f9ff !important;
+  color: #1976d2 !important;
+  font-weight: 600;
+  border: 2px solid #1976d2;
+}
+
+.calendar-card ion-datetime::part(calendar-weekday) {
+  background-color: #f8fafc !important;
+  color: #6b7280 !important;
+  font-weight: 600;
+}
+
+/* Button đặt lịch mới */
+.calendar-card ion-button {
+  --background: #1976d2;
+  --color: #fff;
+  --border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 16px;
+  --background-hover: #1565c0;
+}
+
+/* Toggle switches */
+ion-toggle {
+  --background: #e5e7eb;
+  --background-checked: #1976d2;
+  --handle-background: #fff;
+  --handle-background-checked: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reminder-page {
+    padding: 0.5rem;
+  }
+
+  .reminder-title {
+    font-size: 1.5rem;
+  }
+
+  .reminder-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reminder-actions ion-button {
+    width: 100%;
+  }
+}
+
+/* Override cho các element bị chìm màu */
+ion-item {
+  --color: #333 !important;
+}
+
+ion-label {
+  --color: #333 !important;
+}
+
+ion-card-content {
+  color: #333 !important;
+}
+
+/* Đảm bảo text contrast tốt */
+.ion-color-primary {
+  --ion-color-base: #1976d2 !important;
+  --ion-color-contrast: #000000 !important;
+}
+
+/* Header và navigation */
+ion-header ion-toolbar {
+  --background: #1976d2;
+  --color: #fff;
+}
+
+ion-back-button {
+  --color: #000000;
+}
+.rules-card ion-card-title {
+  color: #1e293b; /* màu đen xám đậm */
+  font-weight: 600; /* đậm hơn */
+  font-size: 18px;
+}

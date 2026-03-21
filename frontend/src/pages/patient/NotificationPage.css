@@ -1,0 +1,121 @@
+/* NotificationPage.css */
+
+.notif-content {
+  --background: #fff;
+}
+
+.notif-container {
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-header {
+  font-size: 24px;
+  font-weight: 800;
+  padding: 16px 16px 8px 16px;
+  margin: 0;
+  color: #050505;
+}
+
+.group-title {
+  font-size: 17px;
+  font-weight: 700;
+  padding: 12px 16px 8px 16px;
+  margin: 0;
+  color: #050505;
+}
+
+/* List container */
+.notif-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Notification Item */
+.notif-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.notif-item:hover {
+  background: #f2f2f2;
+}
+
+/* Chưa đọc: Nền xanh nhạt */
+.notif-item.unread {
+  background: #e7f3ff;
+}
+
+/* Icon tròn bên trái */
+.notif-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-size: 28px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.notif-icon-wrapper.primary { background: #1877f2; } /* Xanh Facebook */
+.notif-icon-wrapper.success { background: #42b72a; } /* Xanh lá */
+.notif-icon-wrapper.warning { background: #f7b928; } /* Vàng */
+.notif-icon-wrapper.danger  { background: #fa383e; } /* Đỏ */
+
+/* Body */
+.notif-body {
+  flex: 1;
+}
+
+.notif-text {
+  margin: 0;
+  font-size: 15px;
+  color: #050505;
+  line-height: 1.3333;
+  margin-bottom: 4px;
+}
+
+.notif-text strong {
+  font-weight: 600;
+}
+
+.notif-time {
+  font-size: 13px;
+  color: #65676b;
+  font-weight: 500;
+}
+
+/* Dấu chấm xanh (Unread dot) */
+.notif-status-dot {
+  width: 12px;
+  height: 12px;
+  background: #1877f2;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+
+/* Nút 3 chấm (More) */
+.more-btn {
+  color: #65676b;
+  --padding-start: 4px;
+  --padding-end: 4px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #65676b;
+}
+
+/* --- Added style for Health warning text highlight if needed --- */
+.notif-text.warning {
+    color: #b98900;
+}

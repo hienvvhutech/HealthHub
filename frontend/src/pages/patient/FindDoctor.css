@@ -1,0 +1,198 @@
+.page {
+  background-color: #f9fafb;
+  color: #1e1e1e;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* Ghi đè màu nền cho IonContent */
+.page ion-content {
+  --background: #f9fafb !important;
+  --color: #1e1e1e !important;
+}
+
+/* Ghi đè màu nền cho IonHeader và IonToolbar nếu cần */
+.page ion-header,
+.page ion-toolbar {
+  --background: #ffffff !important;
+  --color: #1e1e1e !important;
+}
+
+/* Đảm bảo ion-card không bị ảnh hưởng bởi nền đen */
+.ion-card {
+  background: white !important;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.page ion-card-content {
+  padding: 1.25rem;
+}
+
+.page .search-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.page ion-searchbar,
+.page ion-select {
+  flex: 1;
+  --background: #ffffff !important;
+  --color: #1e1e1e !important;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.page ion-button {
+  --background: #3b82f6 !important;
+  --color: #ffffff !important;
+  border-radius: 6px;
+  font-weight: 500;
+}
+/* Tắt chế độ dark mode trong toàn bộ app nếu trình duyệt kích hoạt */
+:root {
+  color-scheme: light !important;
+}
+
+/* Đè cứng nền cho các phần Ionic */
+ion-content,
+ion-page,
+ion-list,
+ion-card,
+ion-toolbar,
+ion-header {
+  --background: #f9fafb !important;
+  background: #f9fafb !important;
+  color: #1e1e1e !important;
+}
+
+/* === STYLES MỚI CHO CARD BÁC SĨ === */
+
+.doctor-card-modern {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: white;
+}
+
+.doctor-card-layout {
+  display: flex;
+  flex-direction: column; /* Mobile: Xếp dọc */
+  gap: 1rem;
+}
+
+.doctor-avatar-col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.doctor-avatar {
+  width: 80px;
+  height: 80px;
+  background: #e0e7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  font-size: 2.5rem;
+}
+
+.doctor-info-col {
+  flex: 1;
+  text-align: center; /* Mobile: Căn giữa */
+}
+
+.doctor-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.doctor-tags {
+  display: flex;
+  justify-content: center; /* Mobile: Căn giữa */
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.doctor-tags ion-chip {
+  margin: 0;
+  font-size: 0.8rem;
+  height: 24px;
+}
+
+.doctor-details p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Mobile: Căn giữa */
+  gap: 6px;
+}
+
+.doctor-details p.price {
+  font-weight: 600;
+  color: #059669;
+}
+
+.doctor-actions-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn-action {
+  width: 100%; /* Mobile: Full width */
+  margin: 0;
+  --border-radius: 8px;
+  height: 40px;
+  font-size: 0.9rem;
+}
+
+/* === DESKTOP RESPONSIVE (min-width: 768px) === */
+@media (min-width: 768px) {
+  .doctor-card-layout {
+    flex-direction: row; /* Desktop: Xếp ngang */
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .doctor-avatar-col {
+    flex: 0 0 100px; /* Cố định chiều rộng cột avatar */
+  }
+
+  .doctor-info-col {
+    text-align: left;
+    padding: 0 1.5rem;
+    border-left: 1px solid #f3f4f6; /* Thêm đường kẻ ngăn cách */
+  }
+
+  .doctor-tags {
+    justify-content: flex-start;
+  }
+
+  .doctor-details p {
+    justify-content: flex-start;
+  }
+
+  .doctor-actions-col {
+    flex: 0 0 160px; /* Cố định chiều rộng cột actions */
+    justify-content: center;
+  }
+
+  /* Nút nhỏ lại trên desktop */
+  .btn-action {
+    width: 100%; /* Chiếm hết chiều rộng của cột actions (160px) */
+    height: 36px; /* Nhỏ hơn chút */
+    font-size: 0.85rem;
+  }
+}

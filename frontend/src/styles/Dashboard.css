@@ -1,0 +1,166 @@
+/* Dashboard Styles */
+.dashboard-content {
+  background-color: #f5f5f5;
+}
+
+.welcome-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.welcome-section p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.dashboard-segment {
+  margin-bottom: 24px;
+  background: white;
+  border-radius: 8px;
+}
+
+.section-content {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.appointment-card {
+  border-left: 4px solid #667eea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-info {
+  padding: 12px 0;
+}
+
+.appointment-doctor {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.appointment-date {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.appointment-status {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.status-pending {
+  color: #ffa500;
+  font-weight: 600;
+  background: #fff3cd;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.status-confirmed {
+  color: #28a745;
+  font-weight: 600;
+  background: #d4edda;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.status-completed {
+  color: #17a2b8;
+  font-weight: 600;
+  background: #d1ecf1;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.status-cancelled {
+  color: #dc3545;
+  font-weight: 600;
+  background: #f8d7da;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 24px;
+  margin: 0;
+}
+
+.view-all-button {
+  margin-top: 12px;
+}
+
+.health-card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+.health-item {
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.health-item p {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.health-value {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-button {
+  height: 56px;
+  font-weight: 600;
+}

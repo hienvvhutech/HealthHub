@@ -1,0 +1,387 @@
+/* Global Styles */
+.payment-content {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --ion-background-color: transparent;
+}
+
+.payment-grid {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.payment-header {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color: white;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.payment-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.title-icon {
+  font-size: 24px;
+  color: white;
+}
+
+/* Loading Styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 20px;
+}
+
+.loading-animation {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  --color: #667eea;
+  z-index: 2;
+}
+
+.loading-pulse {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.loading-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Error Styles */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  gap: 16px;
+}
+
+.error-icon {
+  font-size: 64px;
+  color: #e74c3c;
+}
+
+.error-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.error-banner {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 16px 20px;
+  margin: 0 20px 20px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  animation: slideDown 0.3s ease;
+}
+
+.error-banner-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Styles */
+.appointment-card,
+.payment-card {
+  margin: 0 0 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.appointment-card:hover,
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Appointment Card */
+.appointment-header {
+  background: linear-gradient(135deg, #10b981, #059669);
+  --color: white;
+  padding: 20px;
+}
+
+.appointment-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.success-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.appointment-content {
+  padding: 24px;
+}
+
+.appointment-details {
+  margin-bottom: 24px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.specialty-icon {
+  color: #8b5cf6;
+}
+.doctor-icon {
+  color: #10b981;
+}
+.date-icon {
+  color: #f59e0b;
+}
+.time-icon {
+  color: #ef4444;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 16px;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.fee-breakdown {
+  border-top: 2px solid #e2e8f0;
+  padding-top: 20px;
+}
+
+.fee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.fee-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+/* Payment Card */
+.payment-header-card {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  --color: white;
+  padding: 20px;
+}
+
+.payment-title-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.wallet-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.payment-content-card {
+  padding: 24px;
+}
+
+/* Payment Methods */
+.payment-methods {
+  margin-bottom: 24px;
+}
+
+.payment-method {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.payment-method:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method.active {
+  border-color: #667eea;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.2);
+}
+
+.method-icon-container {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  transition: all 0.3s ease;
+}
+
+.payment-method.active .method-icon-container {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.method-icon {
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.payment-method.active .method-icon {
+  color: white;
+}
+
+.method-icon.primary {
+  color: #667eea;
+}
+.method-icon.secondary {
+  color: #e91e63;
+}
+.method-icon.success {
+  color: #10b981;
+}
+
+.method-info {
+  flex: 1;
+}
+
+.method-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.method-description {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.active-badge {
+  --background: linear-gradient(135deg, #10b981, #059669);
+  --color: white;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  animation: bounceIn 0.3s ease;
+}

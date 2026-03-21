@@ -1,0 +1,167 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/** Ionic CSS Variables **/
+:root {
+  /** Font family **/
+  --ion-font-family: 'Be Vietnam Pro', sans-serif;
+
+  /** primary **/
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  /** secondary **/
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #36abe0;
+  --ion-color-secondary-tint: #50c8ff;
+
+  /** tertiary **/
+  --ion-color-tertiary: #5260ff;
+  --ion-color-tertiary-rgb: 82, 96, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #4854e0;
+  --ion-color-tertiary-tint: #6370ff;
+
+  /** success **/
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  /** warning **/
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  /** danger **/
+  --ion-color-danger: #eb445a;
+  --ion-color-danger-rgb: 235, 68, 90;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #cf3c4f;
+  --ion-color-danger-tint: #ed576b;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #808289;
+  --ion-color-medium-tint: #9d9fa6;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+/* === Global Input Style Reset === */
+
+/* Xóa viền/highlight của IonItem */
+ion-item {
+  --highlight-height: 0;
+  --border-width: 0 !important;
+  --inner-border-width: 0 !important;
+  --box-shadow: none !important;
+  --background-focused: transparent !important;
+  --ripple-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Xóa viền của native input bên trong */
+ion-input, ion-textarea, ion-select {
+  --padding-start: 10px !important;
+  --padding-end: 10px !important;
+  --background: transparent;
+  
+  /* Xóa border hoàn toàn */
+  border: none !important; 
+  --border-color: transparent !important;
+  
+  border-radius: 8px !important; 
+  margin-top: 4px !important;
+  box-shadow: none !important;
+}
+
+/* Đảm bảo không có outline khi focus */
+ion-input.has-focus, ion-textarea.has-focus, ion-select.select-expanded {
+  border: none !important;
+  --border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Xóa outline mặc định của browser */
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Reset cho IonSelect */
+ion-select::part(container) {
+  width: 100%;
+}
+ion-select {
+    --placeholder-opacity: 1;
+}
+
+/* Tùy chỉnh riêng cho các input có class custom để giữ border mong muốn (nếu có) */
+.sc-ion-input-md-h, .sc-ion-textarea-md-h, .sc-ion-select-md-h {
+    --highlight-color-focused: transparent !important;
+}
+
+/* === Admin Layout Fix === */
+#main-content {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+html,
+body,
+ion-app,
+ion-page,
+ion-content {
+  height: 100%;
+}
+html {
+  color-scheme: light !important;
+}
+
+body {
+  --ion-background-color: #ffffff !important;
+  --ion-text-color: #000000 !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}

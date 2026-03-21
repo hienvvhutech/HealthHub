@@ -1,0 +1,113 @@
+/* ==== Login form giống ảnh mẫu ==== */
+
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 1rem;
+}
+
+.form-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Tiêu đề trang */
+.form-box h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #111827;
+}
+
+.form-box p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Input & Label */
+ion-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+ion-item {
+  --background: #f1f5f9;
+  --color: #000000;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  border: 1px solid #d1d5db;
+}
+
+ion-input {
+  --color: #111827;
+  font-size: 16px;
+}
+
+/* Checkbox + Quên mật khẩu */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 18px;
+  color: #374151;
+}
+
+/* Nút đăng nhập */
+ion-button {
+  --background: #3b82f6;
+  --border-radius: 6px;
+  --color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+/* Đường kẻ chia */
+.divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider span {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Nút đăng nhập mạng xã hội */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-button {
+  flex: 1;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: #374151;
+  cursor: pointer;
+}

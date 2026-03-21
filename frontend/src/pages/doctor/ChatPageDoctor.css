@@ -1,0 +1,241 @@
+/* ChatPageDoctor.css - Zalo/Messenger Style */
+
+/* Base Layout */
+.chat-page-custom {
+    background-color: #f2f4f7; /* Nền xám nhạt */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header */
+.chat-header ion-toolbar {
+    --background: #ffffff;
+    --border-width: 0 0 1px 0;
+    --border-color: #e0e0e0;
+    --min-height: 60px;
+    padding-inline: 0;
+}
+
+/* Fix nút back */
+ion-back-button {
+    display: block !important;
+    --color: #333 !important; 
+    --icon-font-size: 24px;
+    --padding-start: 10px;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 0; 
+}
+
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    background: #e3f2fd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    border: 1px solid #e0e0e0;
+}
+
+.header-text h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Content */
+.chat-content {
+    --background: #f2f4f7;
+}
+
+.messages-container {
+    padding: 15px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Date Divider */
+.chat-date-divider {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.chat-date-divider span {
+    background: rgba(0,0,0,0.1);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 11px;
+    background-color: #b0b8c3;
+}
+
+/* Message Row */
+.message-row {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: flex-end; 
+}
+
+.message-row.current-user {
+    justify-content: flex-end;
+}
+
+/* Avatar Logic */
+.avatar-container {
+    margin-right: 10px;
+    flex-shrink: 0;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Ẩn avatar của chính mình (bác sĩ) */
+.message-row.current-user .avatar-container {
+    display: none; 
+}
+
+.avatar-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.avatar-circle ion-icon {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Message Bubble Container */
+.message-bubble-container {
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-row.current-user .message-bubble-container {
+    align-items: flex-end;
+}
+
+.message-bubble {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    word-break: break-word;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    min-width: 60px;
+}
+
+/* Style cho tin nhắn của MÌNH (Bác sĩ) - Xanh nhạt */
+.message-bubble.me {
+    background: #e5efff;
+    color: #000;
+    border: 1px solid #cce0ff;
+}
+
+/* Style cho tin nhắn của HỌ (Bệnh nhân) - Trắng */
+.message-bubble.them {
+    background: #ffffff;
+    color: #000;
+    border: 1px solid #e0e0e0;
+}
+
+.message-content {
+    margin-bottom: 4px;
+}
+
+.message-time {
+    font-size: 10px;
+    text-align: right;
+    color: #888;
+    line-height: 1;
+}
+
+/* Custom Footer */
+.chat-footer-custom {
+    background: #ffffff !important;
+    padding: 10px 15px !important;
+    border-top: 1px solid #e0e0e0;
+    --background: #ffffff; 
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    width: 100%;
+}
+
+.custom-textarea {
+    flex-grow: 1;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    resize: none;
+    background: #ffffff;
+    color: #333;
+    min-height: 40px;
+    max-height: 100px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.custom-textarea:focus {
+    border-color: #0084ff;
+}
+
+.custom-send-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background: transparent;
+    color: #0084ff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.custom-send-btn:hover {
+    background: #f0f8ff;
+}
+
+.custom-send-btn:disabled {
+    color: #ccc;
+    background: transparent;
+    cursor: default;
+}
+
+.custom-send-btn ion-icon {
+    font-size: 24px;
+}

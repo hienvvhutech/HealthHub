@@ -1,0 +1,66 @@
+/* Form Styles */
+.form-content {
+  background-color: #f5f5f5;
+}
+
+.form-card {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.form-card ion-card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.form-card ion-card-title {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-card ion-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.form-card ion-input,
+.form-card ion-select {
+  --padding-bottom: 8px;
+  --padding-top: 8px;
+}
+
+.doctor-info-card {
+  background: #f9f9f9;
+  border-left: 4px solid #667eea;
+  margin-top: 16px;
+}
+
+.doctor-info-card p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.doctor-info-card strong {
+  color: #333;
+}
+
+.submit-button {
+  margin-top: 16px;
+  height: 48px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.form-divider {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  margin: 16px 0;
+}

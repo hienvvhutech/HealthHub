@@ -1,0 +1,36 @@
+/* AdminStyle.css */
+
+.back-button {
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0b76d1;
+}
+
+.admin-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+.table-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table th,
+.table td {
+  vertical-align: middle !important;
+  text-align: center;
+}

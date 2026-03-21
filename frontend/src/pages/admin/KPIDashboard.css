@@ -1,0 +1,93 @@
+.kpi-header {
+  margin-bottom: 24px;
+}
+
+.kpi-header h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  margin-bottom: 8px;
+}
+
+.kpi-header p {
+  color: #000000; /* ✅ ĐEN TUYỆT ĐỐI */
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* KPI CARD - CHỮ ĐEN TRÊN NỀN TRẮNG */
+.kpi-card {
+  border-radius: 16px;
+  color: #000000 !important; /* ✅ Chữ đen */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff !important; /* ✅ Nền trắng */
+  border: 1px solid #e5e7eb; /* Viền xám nhẹ */
+}
+
+/* Bỏ gradient cũ, thay bằng border-top màu để phân biệt */
+.kpi-card.uptake {
+  border-top: 4px solid #3b82f6; /* Xanh dương */
+}
+
+.kpi-card.reexam {
+  border-top: 4px solid #10b981; /* Xanh lá */
+}
+
+.kpi-card.reminder {
+  border-top: 4px solid #f59e0b; /* Vàng */
+}
+
+.kpi-card.iot {
+  border-top: 4px solid #8b5cf6; /* Tím */
+}
+
+.kpi-card ion-card-title {
+  color: #000000 !important; /* ✅ Tiêu đề đen */
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.kpi-value {
+  font-size: 42px; /* To hơn chút */
+  font-weight: 800;
+  text-align: center;
+  padding: 10px !important;
+  color: #000000 !important; /* ✅ Số liệu đen */
+}
+
+/* CHART CARDS */
+.chart-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: white;
+  height: 100%;
+  color: #000000;
+  border: 1px solid #e5e7eb;
+}
+
+.chart-card ion-card-title {
+  color: #000000 !important;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.loading-container p {
+  margin-top: 16px;
+  color: #000000;
+}
